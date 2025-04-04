@@ -1,0 +1,25 @@
+image:
+  name: atlassian/default-image:2
+
+build: &build
+  step:
+    name: Build
+    script:
+    - docker build -t astraube/fsrt-report-pipe .
+    services:
+    - docker
+
+push: &push
+  step:
+    name: Push and Tag
+    script:
+    - ./ci-scripts/docker-release.sh astraube/fsrt-report-pipe
+    services:
+    - docker
+
+pipelines:
+  default:
+  - <<: *build
+  branches:
+    main:
+    - <<: *push
