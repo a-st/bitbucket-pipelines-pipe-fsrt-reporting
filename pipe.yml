@@ -1,8 +1,8 @@
 name: FSRT Report
-image: astraube/fsrt-report-pipe:latest
+image: ghcr.io/a-st/bitbucket-pipelines-pipe-fsrt-reporting
 description: Reports FSRT findings in your app
 category: Code quality
-repository: https://bitbucket.org/alexander_straube/bitbucket-pipelines-pipe-fsrt/
+repository: https://github.com/a-st/bitbucket-pipelines-pipe-fsrt-reporting
 tags:
   - fsrt
   - security

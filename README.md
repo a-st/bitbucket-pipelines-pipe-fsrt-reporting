@@ -7,7 +7,7 @@ This pipe runs the [FSRT - Forge Security Requirements Tester](https://github.co
 Add the following snippet to the script section of your `bitbucket-pipelines.yml` file:
 
 ```yaml
-- pipe: docker://astraube/fsrt-report-pipe:latest
+- pipe: docker://ghcr.io/a-st/bitbucket-pipelines-pipe-fsrt-reporting:latest
   variables:
     FSRT_OPTIONS: "<string>" # Optional options
     FSRT_DIRS: "<string>" # The directory to scan
@@ -37,7 +37,7 @@ pipelines:
     - step:
         name: FSRT Reporting
         script:
-          - pipe: docker://astraube/fsrt-report-pipe:latest
+          - pipe: docker://ghcr.io/a-st/bitbucket-pipelines-pipe-fsrt-reporting:latest
             variables:
               FSRT_OPTIONS: "--out fsrt-report.json"
               FSRT_DIRS: $BITBUCKET_CLONE_DIR
