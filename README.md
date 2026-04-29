@@ -1,4 +1,4 @@
-# Bitbucket Pipelines Pipe: ESLint Reporting
+# Bitbucket Pipelines Pipe: FSRT Reporting
 
 This pipe runs the [FSRT - Forge Security Requirements Tester](https://github.com/atlassian-labs/FSRT) in Bitbucket Pipelines
 
